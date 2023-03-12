@@ -1,0 +1,603 @@
+html,
+body {
+  background-color: hsl(0, 0%, 93%);
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --background: 0 ;
+  --mainBack: 1;
+  --secBack: 2;
+  --lastBack: 3;
+}
+
+.widgets {
+  height: 430px;
+  width: 100%;
+  background-color: hsl(0, 0%, 91%);
+  border-bottom: 7.5px solid hsl(0, 0%, 86%);
+  margin: 0;
+  box-shadow: -1.5px 1.5px 10px hsl(0, 0%, 76%);
+  white-space: nowrap;
+  position: relative;
+}
+
+.widget-items {
+  height: 100%;
+  width: calc(100% - 97.5px);
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 97.5px;
+  align-items: center;
+  white-space: nowrap;
+  display: inline-block;
+  transition: 0.25s ease;
+}
+
+.widget-item {
+  height: 100%;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 30px;
+
+  font-family: "Lexend", sans-serf;
+}
+
+#container {
+  background-color: hsl(0, 0%, 95%);
+  height: 375px;
+  width: 600px;
+  border-radius: 25px;
+  display: inline-block;
+}
+
+/* .widget-item{
+
+} */
+
+.widget-item-seperator {
+  border-left: 6.5px solid hsl(0, 0%, 86%);
+  height: 410px;
+  width: 0;
+  margin-right: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.widget-arrows {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(100vw - 97.5px);
+  transform: translateX(82.5px);
+  /*   height: 100%;
+  width: 75px;
+  position: relative;
+  opacity: 0.15;
+/*   transform: translate(-160px, -166.5px); */
+  /*   
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  transition: 0.25s ease; */
+}
+
+.arrows {
+  opacity: 0.05;
+  background-color: gray;
+  height: 430px;
+  width: 75px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.right-arrow>svg {
+  transform: rotate(180deg);
+}
+
+.hidden-arrow {
+  display: none;
+}
+
+.arrows:hover {
+  opacity: 0.15;
+  transition: 0.25s ease;
+}
+
+#Office {
+  background-color: hsl(206, 100%, 68%);
+  border: 7.5px solid hsl(207, 100%, 75%);
+}
+
+#Office > svg {
+  color: hsl(207, 100%, 75%);
+}
+
+#House {
+  background-color: hsl(0, 100%, 71%);
+  border: 7.5px solid hsl(0, 100%, 76%);
+}
+
+#House > svg {
+  color: hsl(0, 100%, 76%);
+}
+
+#Apartment {
+  background-color: hsl(123, 100%, 66%);
+  border: 7.5px solid hsl(124, 100%, 80%);
+}
+
+#Apartment > svg {
+  color: hsl(124, 100%, 80%);
+}
+
+.more {
+  width: 50px;
+  height: 50px;
+  transform: translate(7.5px, 12.5px);
+  align-self: end;
+}
+
+.moreCircle:hover {
+  height: 50px;
+  width: 50px;
+  z-index: -100;
+  background-color: #bbb;
+  border-radius: 50%;
+  opacity: 0.2;
+  display: inline-block;
+  transform: translate(-62.5px, -0.5px);
+}
+
+.addNew {
+  transform: translate(0px, -15px);
+}
+
+.addThingButton {
+  margin: 12.5px 25px 12.5px 0;
+  position: static;
+  font-family: "Lexend", sans-serf;
+  height: 144.629261081px;
+  width: 232.519px;
+  color: hsl(213, 99%, 67%);
+  text-align: center;
+  align-content: center;
+  vertical-align: bottom;
+  font-size: 30px;
+  font-weight: bolder;
+  border: 7.5px solid hsl(213, 99%, 67%);
+  border-radius: 25px;
+  transition: 0.25s ease;
+}
+
+.addThingButton:hover {
+  transform: scale(1.05);
+  transition: 0.25s ease;
+}
+
+.things {
+  margin-right: 0;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.things > h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Lexend", sans-serf;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.thingButtons {
+  margin: 12.5px 25px 12.5px 0;
+  padding: 0 12.5px 0 12.5px;
+  height: 144.629261081px;
+  width: 232.519px;
+  color: white;
+  border-radius: 25px;
+  transition: 0.25s ease;
+  display: inline-flex; /*inline-grid next */
+  justify-content: left;
+  flex-direction: column;
+}
+
+.thingButtons:hover {
+  transform: scale(1.05);
+  transition: 0.25s ease;
+}
+
+.thingButtons > p {
+  font-family: "Lexend", sans-serf;
+  text-align: left;
+  color: white;
+  font-size: 35px;
+  font-weight: medium;
+  word-break: break-all;
+  margin: 0;
+  transform: translateY(5px);
+}
+
+.thingButtons > svg {
+  transform: translateY(5px);
+}
+
+/* Start of Menu */
+
+.menu {
+  display: flex;
+  /*   align-items: center; */
+  position: fixed;
+  background-color: hsl(0, 0%, 86%);
+  overflow: hidden;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+#menu-items {
+  font-family: "Lexend", sans-serf;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icons {
+  margin: 0 12.5px;
+}
+
+.hamburger-menu {
+  padding: 0;
+  margin-left: 12.5px;
+  transform: translate(0%, -25%);
+  background-color: hsl(0, 0%, 86%);
+  border: none;
+  color: hsl(0, 0%, 62%);
+  vertical-align: top;
+  align-self: right;
+  transition: 0.25s ease;
+  z-index: 4;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transform: translate(0, 7.5px);
+}
+
+#menu:has(.is-opened) .hamburger-menu {
+  transform: translate(377.5px, 7.5px);
+}
+
+.menuL {
+  transition-property: transform;
+  transition: 0.25s ease;
+  transform-origin: center;
+}
+
+.menuLTwo {
+  transform: translateY(-25%);
+}
+.menuLThree {
+  transform: translateY(25%);
+}
+
+#menu:has(.is-opened) .menuLOne {
+  transform: scaleX(0.1);
+}
+
+#menu:has(.is-opened) .menuLTwo {
+  transform: rotate(45deg);
+}
+
+#menu:has(.is-opened) .menuLThree {
+  transform: rotate(-45deg);
+}
+
+.menu-item {
+  background-color: hsl(0, 0%, 86%);
+  color: hsl(0, 0%, 62%);
+  /*   font-size: clamp(16px, 23px, 30px); */
+  font-size: 50px;
+  white-space: nowrap;
+  transform: translate(-300px);
+
+  display: block;
+  text-decoration: none;
+  overflow-x: hidden;
+  transition: 0.25s ease;
+}
+
+#menu:has(.is-opened) .menu-item:not(.account) {
+  transition: 0.25s ease;
+}
+
+.menu-item:hover {
+  transition: 0.25s ease;
+}
+
+.menu-item > svg {
+  vertical-align: baseline;
+  margin: 0 0 0 12.5px;
+}
+
+span:hover {
+  text-decoration: underline;
+}
+
+.tst {
+  color: hsl(0, 0%, 62%);
+  /* /* overflow: hidden; */
+  position: absolute;
+  bottom: 0;
+  transform: translate(0px);
+}
+
+.account {
+  color: hsl(0, 0%, 62%);
+  overflow: visible;
+  position: absolute;
+  text-decoration: none;
+  bottom: 0;
+  transform: translate(0px);
+}
+
+/* End of Menu */
+
+.curtain {
+  top: 0;
+  left: 0px;
+  position: fixed;
+  background-color: hsl(0, 0, 7);
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background: rgb(18 18 18 / 0) !important;
+  backdrop-filter: none;
+  transition: all 0.25s ease, width 0;
+  pointer-events: none;
+}
+
+.curtainOut {
+  top: 0;
+  left: 0px;
+  position: fixed;
+  background-color: hsl(0, 0, 7);
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background: rgb(18 18 18 / 0.17) !important;
+  backdrop-filter: blur(2px);
+  pointer-events: auto;
+  transition: all 0.25s ease, width 0;
+}
+
+img {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  transform: rotate(0deg);
+  vertical-align: text-top;
+  transform-origin: center;
+  transition: 0.5s ease 1.5s;
+}
+
+img:hover {
+  transform: rotate(360deg);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.profContainer {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  margin: 0 0 0 12.5px;
+}
+
+/* .p{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0px);
+  z-index: 1;
+  transition: 0.25s ease;
+/*   background-image: url("https://unsplash.com/photos/se3tHNszbkM"); */
+/*   transform-style: preserve-3d; */
+/* } */
+
+.cs {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: rgb(24, 24, 24);
+  transform: translateY(0px);
+  border-radius: 35px;
+  z-index: -1;
+  transition: 0.25s ease 1.5s;
+  /*   transform: translateZ(-10px); */
+}
+
+/* .cs > a{
+  height: 34.800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profContainer:hover>.cs{
+  height: 115px;
+  transform: translateY(-40px);
+  transition: 0.25s ease 0s;
+} */
+
+.svg {
+  color: white;
+}
+
+/* p:hover{
+  transform: scale(1.25);
+} */
+
+span {
+  top: -15px;
+}
+
+@media only screen and (max-width: 607.5px) {
+  .things {
+    padding-left: 14.5px;
+  }
+
+  .menu {
+    width: 100%;
+    height: 65px;
+    flex-direction: column;
+    border-bottom: 8px solid hsl(0, 0%, 75%);
+    transition: height 0.25s ease;
+  }
+
+  .is-opened.menu {
+    height: 380px;
+  }
+
+  #menu-items {
+    width: 100%;
+    transform: translateY(55px);
+    align-items: center;
+    flex-direction: column;
+    height: 375px;
+  }
+
+  .menu-item {
+    transform: translateY(-425px);
+  }
+
+  #menu:has(.is-opened) .menu-item:not(.account) {
+    transform: translateY(0px);
+  }
+
+  #menu:has(.is-opened) .hamburger-menu {
+    transform: translate(0px, 7.5px);
+  }
+
+  .account > span {
+    display: none;
+  }
+
+  .account {
+    transform: translate(-7.5px, -357.5px);
+    align-self: flex-end;
+  }
+
+  .cs {
+    flex-direction: row;
+  }
+
+  .cs > a {
+    width: 34.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profContainer:hover > .cs {
+    width: 115px;
+    transform: translateX(-40px);
+    transition: 0.25s ease 0s;
+  }
+
+  .svg {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 607.5px) {
+  .things {
+    padding-left: 97.5px;
+  }
+
+  .menu {
+    width: 75px;
+    height: 100%;
+    border-right: 8px solid hsl(0, 0%, 75%);
+    transition: width 0.25s ease;
+  }
+
+  .is-opened.menu {
+    width: 450px;
+  }
+
+  #menu-items {
+    transform: translateY(0px);
+    top: 0px;
+    height: 100%;
+  }
+
+  .menu-item:not(.account) {
+    transform: translate(-425px);
+  }
+
+  #menu:has(.is-opened) .menu-item:not(.account) {
+    transform: translate(0px);
+  }
+
+  #menu:has(.is-opened) .hamburger-menu {
+    transform: translate(377.5px, 7.5px);
+  }
+
+  .cs {
+    flex-direction: column;
+  }
+
+  .cs > a {
+    height: 34.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profContainer:hover > .cs {
+    height: 115px;
+    transform: translateY(-40px);
+    transition: 0.25s ease 0s;
+  }
+
+  .svg {
+    padding-top: 10px;
+  }
+}
